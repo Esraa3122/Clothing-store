@@ -1,0 +1,893 @@
+/* initialization */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+   background-color: white;
+   perspective: 700px;
+}
+.home, .fashion,.trending,.Customer,.like,.news,.section7{
+   width: 100%;
+   height: 85vh;
+   margin: 30px 0px ;
+}
+/* header */
+header{
+   width: 100%;
+   height: 15vh;
+}
+.header{
+   width: 100%;
+   height: 70%;
+   display: grid;
+   grid-template-columns: 20% 60% 20%;
+   grid-template-rows: 100% 100% 100%;
+}
+.logo{
+   margin: auto;
+}
+.header-nav{
+   width: 100%;
+   font-size: 20px;
+   text-align: center;
+   padding: 10px;
+   color: black;
+}
+.nav5 span i{
+   font-size: 10px;
+}
+.nav5-content{
+   width: 280px;
+   height: 190px;
+   position: absolute;
+   background-color: white;
+   color: black;
+   border: 1px solid gray;
+   box-shadow: #C1D4D9;
+   font-size: 20px;
+   border-radius: 10px;
+   display: grid;
+   padding: 15px;
+   padding-left: 15px;
+   grid-template-columns: 60% 40%;
+   text-align: left;
+   top: 50px;
+   left: -5px;
+   visibility: hidden;
+   opacity: 0;
+}
+.nav5-content p{
+   font-size: 17px;
+   margin-top: 10px;
+}
+.nav5-content p:hover{
+   color: rgb(175, 6, 6);
+   cursor: pointer;
+   transform: scale(1.09);
+}
+.nav5:hover .nav5-content{
+   visibility: visible;
+   opacity: 100;
+   transition: 1s;
+}
+.line{
+   width: 50px;
+   height: 1px;
+   margin: 5px 0px;
+   bottom: 0;
+   background-color: gray;
+}
+.nav{
+   display: inline-block;
+   padding: 10px;
+   margin: 0px 10px;
+   box-sizing: border-box;
+   position: relative;
+}
+.address{
+   font-weight: 200;
+   color: gray
+
+}
+
+.nav::after{
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 100%;
+   top: 0;
+   left: 0;
+   border-left: none;
+   border-bottom: none;
+   border-top: none;
+   opacity: 0%;
+   visibility: hidden;
+   transition: 0.8s;
+}
+.nav:hover::after{
+   cursor: pointer;
+   width: 100%;
+   height: 100%;
+   border-left: 1px solid red;
+   border-bottom: 1px solid red;
+   border-top: 1px solid red;
+   opacity: 100%;
+   visibility: visible;
+}
+.nav::before{
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 100%;
+   top: 0;
+   left: 0;
+   transition: 0.4s;
+   border-right: none;
+   opacity: 0%;
+   visibility: hidden;
+
+}
+.nav:hover::before{
+   cursor: pointer;
+   width: 100%;
+   height: 100%;
+   border-right: 1px solid red;
+   opacity: 100%;
+   visibility: visible;
+}
+.nav:hover{
+   color: red;
+}
+.header-icon {
+   margin: auto;
+   font-size: 15px;
+   position: relative;
+   color: black;
+}
+ .header-icon i{
+   padding: 0px 10px;
+   color: black;
+}
+.header-icon i:hover{
+   color:red;
+   cursor: pointer;  
+}
+.noti:hover{
+   animation : jump1 1s forwards
+}
+.noti{
+   width: 20px;
+   height: 20px;
+   bottom: 14px;
+   right: 6px;
+   position: absolute;
+   border-radius: 50%;
+   color: white;
+   font-size: 15px;
+   padding-left: 5px;
+   padding-top: 2px;
+   background-color: red;
+   transform: translateY(0px);
+}
+@keyframes jump1 {
+   50%{
+       transform: translate(0px,-5px);
+   }
+}
+.offer{
+   width: 100%;
+   height: 30%;
+   padding: 4px;
+   background-color: black;
+}
+.offer p{
+   text-align: center;
+   color: white;
+}
+.offer p span a{
+   text-align: center;
+   color: bisque;
+   transition: font-size 1s ease;
+}
+.offer p span a:hover{
+   font-size: 18px;
+}
+/* home */
+.home{
+   background-image: url("../images/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man.jpg");
+   background-size: cover;
+   display: grid;
+   grid-template-columns: 45% 55%;
+   text-align: center;
+   padding: 200px 150px;
+   margin: 0px 0px ;
+}
+.home p{
+   line-height: 25px;
+   margin: 10px;
+   padding-top: 5px;
+   font-size: 20px;
+   color:  grey;
+}
+.home-title1{
+   font-size: 40px;
+   font-family: "Dancing Script", serif;
+   position: relative;
+   color: red;
+}
+.home-title2{
+   font-size: 40px;
+   padding-top: 15px;
+}
+.home-content button{
+   position: relative;
+   width: 160px;
+   height: 55px;
+   padding: 5px;
+   font-size: 20px;
+   background-color: black;
+   color: white;
+   border: none;
+   margin: 10px 0px;
+   top: 10px;
+   transform: translate(0px , 10px);
+   animation: jump 1s normal;
+   animation-delay: 2s;
+}
+@keyframes jump {
+   50%{
+       transform: translate(0px,10px);
+   }
+}
+.home-content button:hover{
+   cursor: pointer;
+   background-color: white;
+   color: black;
+   border: 1px solid black;
+}
+/* fashion */
+.fashion{
+   display: grid;
+   grid-template-columns: 32% 32% 32%;
+   grid-template-rows: 80%;
+   padding: 4%;
+   text-align: center;
+   font-size: 25px;
+   position: relative;
+}
+.fashion-div1, .fashion-div2, .fashion-div3{
+   margin-left: 15%;
+   overflow: hidden;
+   position: relative;
+}
+.fashion-div1-img, .fashion-div2-img, .fashion-div3-img{
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   transition:transform 1s ease;
+   background-position: center;
+}
+.fashion-div1-img{
+   background-image: url("../images/DSC_3187_1296x.webp");
+}
+.fashion-div2-img{
+   background-image: url("../images/DSC_3835_1296x.webp");
+}
+.fashion-div3-img{
+   background-image: url("../images/babys.jpg");
+}
+.fashion-overlay{
+   width: 100%;
+   height: 100%;
+   background: -webkit-linear-gradient(bottom,black,rgba(0,0,0,0));
+}
+.fashion-div1:hover .fashion-div1-img, .fashion-div2:hover .fashion-div2-img, .fashion-div3:hover .fashion-div3-img{
+   transform: scale(1.1);
+}
+.fashion-div1-content , .fashion-div2-content , .fashion-div3-content{
+   position: absolute;
+   margin: 0px 80px;
+   margin-top: -60px;
+   color: white;
+   transition: margin-top 1s ease;
+}
+.fashion-div1-content  a , .fashion-div2-content  a , .fashion-div3-content  a{
+   text-decoration: none;
+   color: bisque;
+}
+.fashion-div1:hover .fashion-div1-content, .fashion-div2:hover .fashion-div2-content, .fashion-div3:hover .fashion-div3-content{
+   margin-top: -130px;
+}
+.fashion-hidden{
+   width: 24%;
+   height: 50px;
+   background-color: beige;
+   position: absolute;
+   top: 500px;
+}
+/*  trending */
+.trending{
+   padding: 2%;
+   display: grid;
+   grid-template-rows: 10% 85%;
+   grid-row-gap: 5%;
+}
+.trending-upper{
+   padding: 0.5% 3%;
+   color: black;
+}
+.trending-upper h2{
+   font-size: 30px;
+}
+.trending-upper-nav{
+   position: relative;
+   margin-left: auto;
+   margin-top: 5px;
+   float: right;
+   word-spacing: 5px;
+   font-size: 18px;
+}
+.trending-upper-nav h4:hover{
+   cursor: pointer;
+   color: red;
+}
+.trending-upper h2, .trending-upper-nav h4{
+   display: inline-block;
+}
+.trending-upper-nav-line{
+   position: absolute;
+   width: 80px;
+   height: 4px;
+   background-color: red;
+   position: absolute;
+   margin: 15px 40px;
+}
+.trending-upper-line{
+   width: 100%;
+   height: 0.2px;
+   background-color: rgb(224, 223, 223);
+   margin: 0.8% 0px;
+}
+.trending-lower{
+   display: grid;
+   grid-template-columns: 2% 23% 23% 23% 23% 2%;
+   grid-column-gap: 1%;
+}
+.trending-lower-div1 , .trending-lower-div2 , .trending-lower-div3 , .trending-lower-div4 {
+   padding: 5%;
+   position: relative;
+   text-align: center;
+   font-size: 20px;
+   padding: 5px;
+   color: black;
+   border-radius: 5px;
+} 
+.trending-img1, .trending-img2, .trending-img3, .trending-img4{
+   width: 100%;
+   height: 80%;
+   position: relative;
+   transition: 1s ease;
+   transform-style:preserve-3d ;
+   margin-bottom: 20px;
+}
+.trending-lower-div1-front , .trending-lower-div1-back , 
+.trending-lower-div2-front , .trending-lower-div2-back , 
+.trending-lower-div3-front , .trending-lower-div3-back , 
+.trending-lower-div4-front , .trending-lower-div4-back {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+}
+.trending-lower-div1-front,.trending-lower-div2-front,.trending-lower-div3-front,.trending-lower-div4-front{
+   z-index: 1;
+   backface-visibility: hidden;
+}
+.trending-lower-div1-back , .trending-lower-div2-back , .trending-lower-div3-back , .trending-lower-div4-back {
+   transform: rotateY(180deg);
+}
+.trending-img1:hover, .trending-img2:hover, .trending-img3:hover, .trending-img4:hover{
+   transform: rotateY(180deg);
+}
+.trending-lower-div1-front{
+   background-position: unset;
+   background-image: url("../images/s1.webp");
+}
+.trending-lower-div1-back{
+   background-image: url("../images/s2.webp");
+}
+.trending-lower-div2-front{
+   background-image: url("../images/e1.webp");
+}
+.trending-lower-div2-back{
+   background-image: url("../images/e2.webp");
+}
+.trending-lower-div3-front{
+   background-position: unset;
+   background-image: url("../images/c1.webp");
+}
+.trending-lower-div3-back{
+   background-image: url("../images/c2.webp");
+}
+.trending-lower-div4-front{
+   background-image: url("../images/r2.webp");
+}
+.trending-lower-div4-back{
+   background-position: unset;
+   background-image: url("../images/r1.webp");
+}
+.price{
+   font-size: 20px;
+}
+.trending-hidden-icons{
+   padding: 1%;
+   margin: auto;
+   width: 50%;
+   color: black;
+   background-color: white;
+   text-align: center;
+   font-size: 30px;
+   position: absolute;
+   left: 30%;
+   top: 85%;
+   visibility: hidden;
+   opacity: 0;
+}
+.trending-hidden-icons i:hover{
+   color: red;
+   cursor: pointer;
+}
+.trending-img1:hover .trending-hidden-icons1, 
+.trending-img2:hover .trending-hidden-icons2, 
+.trending-img3:hover .trending-hidden-icons3, 
+.trending-img4:hover .trending-hidden-icons4{
+   animation-name: hide ;
+   visibility: visible;
+   opacity: 100%;
+   transition: 4s;
+   cursor: pointer;
+}
+.fa-chevron-right3,.fa-chevron-left3{
+   color: black;
+   font-size: 40px;
+   margin-top: 200px;
+}
+.fa-chevron-right3:hover,.fa-chevron-left3:hover{
+   color: red;
+   cursor: pointer;
+}
+/* Customer */
+.Customer{
+   background-color: #f0f8fa;
+   height: 50vh;
+   padding: 1% 4%;
+   display: grid;
+   grid-template-columns: 15% 70% 15%;
+   grid-column-gap: 1%;
+   text-align: center;
+   color: black;
+   border-top: 1px solid rgb(199, 192, 192);
+   border-bottom: 1px solid rgb(199, 192, 192);
+}
+.Customer i{
+   position: relative;
+   color: black;
+   font-size: 40px;
+   top:40%
+}
+.Customer i:hover{
+   color: red;
+   cursor: pointer;
+}
+.fa-chevron-left4{
+   text-align: right;
+}
+.fa-chevron-right4{
+   text-align: left;
+}
+.Customer-content{
+   padding: 3% 6%;
+   display: grid;
+   grid-template-rows: 50% 50%;
+}
+.Customer-uppercontent{
+   padding: 2%;
+}
+.Customer-uppercontent p{
+   padding-top: 5px;
+   font-size: 20px;
+   color: gray;
+}
+.Customer-lowercontent{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   font-size: 1.3em;
+}
+.Customer-img{
+   width: 90px;
+   height: 90px;
+   margin: 20px 25px;
+   border-radius: 50%;
+   background-image: url("https://img.freepik.com/free-photo/brunet-man-wearing-hat-denim-overalls_273609-10146.jpg?t=st=1738363124~exp=1738366724~hmac=cc4656a37761a3aa179d2d4cc2222f4efbedbeec9b51bb8a744c606cbb2b55e5&w=740");
+   background-position: center;
+   margin-left: auto;
+   background-size: cover;
+}
+.Customer-lowercontent h4{
+   text-align: left;
+   padding: 10% 0px;
+}
+.Customer-img-p{
+   width: 135px;
+   margin-top: 20px;
+}
+.Customer-img-p p{
+   font-size: 16px;
+   color: gray;
+}
+/* like */
+.like{
+   padding: 2%;
+   display: grid;
+   grid-template-rows: 10% 85%;
+   grid-row-gap: 5%;
+}
+.like-title{
+   padding: 0.5% 3%;
+   color: black;
+   margin: auto;
+   font-size: 20px;
+}
+.like-title h2{
+   display: inline-block;
+}
+
+.like-contain{
+   display: grid;
+   grid-template-columns: 2% 23% 23% 23% 23% 2%;
+   grid-column-gap: 1%;
+}
+.like-contain-div1 , .like-contain-div2 , .like-contain-div3 , .like-contain-div4 {
+   padding: 5%;
+   position: relative;
+   text-align: center;
+   font-size: 20px;
+   color: black;
+   border-radius: 5px;
+} 
+.like-img1, .like-img2, .like-img3, .like-img4{
+   width: 100%;
+   height: 80%;
+   position: relative;
+   margin-bottom: 20px;
+   background-size: cover;
+   background-position: center;
+}
+.like-img1{
+   background-image: url("https://img.freepik.com/free-photo/young-beautiful-woman-looking-camera-trendy-girl-casual-summer-white-t-shirt-jeans-shorts-round-sunglasses-positive-female-shows-facial-emotions-funny-model-isolated-yellow_158538-15808.jpg?t=st=1738360974~exp=1738364574~hmac=9d80bec4e119c360bb22756c6d46cd3006be4dd5d820ab1ccc26af2304d88edd&w=740");
+}
+.like-img2{
+   background-position: left center;
+   background-image: url("https://img.freepik.com/free-photo/portrait-young-beautiful-smiling-female-trendy-summer-dress-sexy-carefree-blond-woman-posing-near-beige-wall-studio-positive-model-having-fun-indoors-cheerful-happy_158538-27107.jpg?t=st=1738361888~exp=1738365488~hmac=5c6802f90fa9adcc0bf10c5023ecc6f2cb2943f989971946f12f1603cd4dc750&w=740");
+}
+.like-img3{
+   background-image: url("https://img.freepik.com/premium-photo/smiling-attractive-young-man-hat-standing-holding-sunglasses-white-background_171337-78415.jpg?w=360");
+}
+.like-img4{
+   background-image: url("https://img.freepik.com/premium-photo/little-girl-isolated-background-thinking-idea_1368-206233.jpg?w=740");
+}
+.like-img1::after, .like-img2::after, .like-img3::after, .like-img4::after{
+   content: "";
+   width: 100%;
+   height: 0%;
+   top:0;
+   left:0;
+   opacity: 0;
+   transition: all 1s ease;
+   visibility: hidden;
+   position: absolute;
+}
+.like-img1::after{
+   background-position: top;
+   background-image: url("https://img.freepik.com/free-photo/young-beautiful-woman-looking-camera-trendy-girl-casual-summer-white-t-shirt-jeans-shorts-round-sunglasses-positive-female-shows-facial-emotions-model-isolated-yellow-shows-tongue_158538-15801.jpg?t=st=1738361786~exp=1738365386~hmac=dc216cf3da9ba7d49b82366b41a238058bb063e503d1dd0b919d97543ba87203&w=740")
+}
+.like-img2::after{
+   background-position: top;
+   background-image: url("https://img.freepik.com/free-photo/portrait-young-beautiful-smiling-female-trendy-summer-dress-sexy-carefree-blond-woman-posing-near-beige-wall-studio-positive-model-having-fun-indoors-cheerful-happyshows-tongue_158538-27103.jpg?t=st=1738361928~exp=1738365528~hmac=e24f0e7af8d528564db24501d0413df3419220d6d386870de1489fad99f57fa4&w=740")
+}
+.like-img3::after{
+   background-image: url("https://img.freepik.com/premium-photo/cheerful-young-man-hat-sunglasses-standing-talking-mobile-phone_171337-78443.jpg?w=360")
+}
+.like-img4::after{
+   background-position: top;
+   background-image: url("https://img.freepik.com/premium-photo/young-girl-isolated-background_1368-175631.jpg?w=740")
+}
+.like-img1:hover::after, .like-img2:hover::after, .like-img3:hover::after, .like-img4:hover::after{
+   width: 100%;
+   height: 100%;
+   top:0;
+   left:0;
+   opacity: 1;
+   visibility: visible;
+}
+.price{
+   font-size: 20px;
+}
+.like-hidden-icons{
+   padding: 1%;
+   margin: auto;
+   width: 50%;
+   color: black;
+   background-color: white;
+   text-align: center;
+   font-size: 30px;
+   position: absolute;
+   left: 30%;
+   top: 85%;
+   visibility: hidden;
+   opacity: 0;
+   z-index: 20;
+}
+.like-hidden-icons i:hover{
+   color: red;
+   cursor: pointer;
+}
+.like-img1:hover .like-hidden-icons1, 
+.like-img2:hover .like-hidden-icons2, 
+.like-img3:hover .like-hidden-icons3, 
+.like-img4:hover .like-hidden-icons4{
+   animation-name: hide ;
+   visibility: visible;
+   opacity: 100%;
+   transition: 4s;
+   cursor: pointer;
+}
+.fa-chevron-right5,.fa-chevron-left5{
+   color: black;
+   font-size: 40px;
+   margin-top: 200px;
+}
+.fa-chevron-right5:hover,.fa-chevron-left5:hover{
+   color: red;
+   cursor: pointer;
+}
+/* News */
+.news{
+   height: 95vh;
+   padding: 2%;
+   display: grid;
+   grid-template-rows: 5% 90%;
+   grid-row-gap: 5%;
+   margin: 100px 0px;
+   background-color: #f0f8fa;
+   border-top: 1px solid rgb(199, 192, 192);
+   border-bottom: 1px solid rgb(199, 192, 192);
+}
+.news-title{
+   padding: 0.5% 3%;
+   color: black;
+   margin: auto;
+   font-size: 20px;
+}
+
+.news-Contant{
+   display: grid;
+   grid-template-columns:32% 32% 32%;
+   grid-column-gap: 1.6%;
+   padding: 0px 1%;
+}
+.news-Contant-div1 , .news-Contant-div2 , .news-Contant-div3 {
+   padding: 5%;
+   position: relative;
+   font-size: 15px;
+   color: gray;
+   border-radius: 5px;
+   line-height: 25px;
+}
+.news-Contant-div1 h4, .news-Contant-div2 h4, .news-Contant-div3 h4{
+   font-size: 20px;
+   color: black;
+   margin-top: 10px;
+}
+.news-Contant-div1 p, .news-Contant-div2 p, .news-Contant-div3 p{
+   line-height: 18px;
+   margin-top: 10px;
+}
+.news-Contant-div1 a, .news-Contant-div2 a, .news-Contant-div3 a{
+   display: block;
+   color: black;
+   font-size: 20px;
+   margin-top: 20px;
+}
+.news-img1+p , .news-img2+p , .news-img3+p{
+   margin-top: 10px;
+   color: gray;
+}
+.news-Contant-div1 a:hover, .news-Contant-div2 a:hover, .news-Contant-div3 a:hover{
+   animation: bigger 1s forwards;
+}
+.news-img1, .news-img2, .news-img3{
+   width: 100%;
+   height: 70%;
+   position: relative;
+   margin-bottom: 10px;
+   background-size: cover;
+   background-position: center;
+   transition: transform 1s;
+}
+.news-img1:hover, .news-img2:hover, .news-img3:hover{
+   transform: scale(1.03);
+}
+.news-Contant-div1:hover h4, .news-Contant-div2:hover h4, .news-Contant-div3:hover h4{
+   color: red;
+}
+.news-img1{
+   background-image: url("https://img.freepik.com/free-psd/men-hoodie-mockup-front-view_1332-60601.jpg?uid=R185428542&ga=GA1.1.1698509194.1713327224&semt=ais_hybrid_sidr");
+}
+.news-img2{
+   background-image: url("https://img.freepik.com/premium-psd/cork-plate-mockup-with-floral-decoration_23-2148051973.jpg?w=740");
+}
+.news-img3{
+   background-image: url("https://img.freepik.com/premium-psd/notebook-with-pen-lying-wooden-shelf-mockup_7956-818.jpg?w=740");
+}
+/* payment */
+.payment{
+   height: 30vh;
+   padding: 2% 4%;
+   display: grid;
+   grid-column-gap: 1%;
+   grid-template-columns:24% 24% 24% 24%;
+   text-align: center;
+   margin: 50px 0px;
+}
+.payment-div1 , .payment-div2 , .payment-div3 , .payment-div4{
+   padding: 5% 0;
+   font-size: 15px;
+   color: gray;
+   border-radius: 5px;
+}
+.payment-div1 i, .payment-div2 i, .payment-div3 i , .payment-div4 i{
+   font-size: 50px;
+   margin-bottom: 15px;
+   color: gray;
+}
+.payment-div1:hover i, .payment-div2:hover i, .payment-div3:hover i , .payment-div4:hover i{
+   color: black;
+   animation : jump 1s forwards
+}
+.payment-div1 h4, .payment-div2 h4, .payment-div3 h4 , .payment-div4 h4{
+   font-size: 20px;
+   color: black;
+}
+.payment-div1 p, .payment-div2 p, .payment-div3 p , .payment-div4 p{
+   line-height: 25px;
+   margin-bottom: 5px;
+}
+/* footer */
+footer{
+   height: 80vh;
+   margin: 0;
+   background-color: black;
+   display: grid;
+   grid-template-rows: 25% 65% 10%;
+   padding: 0.5% 3%;
+}
+.footer-upper{
+   display: grid;
+   grid-template-columns: 30% 45% 16%;
+   grid-column-gap: 3%;
+   padding: 0% 1%;
+   border-bottom: 1px solid gray;
+}
+.footer-upper-title{
+   padding-top: 8%;
+}
+.footer-upper-title h3{
+   font-size: 20px;
+   color: white;
+}
+.footer-upper-title p{
+   font-size: 15px;
+   padding-top: 15px;
+   color: white;
+}
+.footer-upper-search {
+   padding-top: 6%;
+}
+.footer-upper-search input{
+   width: 60%;
+   height: 45%;
+   border-style: none;
+   font-size: 20px;
+   padding: 2%;
+}
+.footer-upper-search button{
+   width: 25%;
+   height: 45%;
+   padding: 0.5%;
+   margin-left: 5px;
+   font-size: 20px;
+   border-style: none;
+   background-color: red;
+   color: white;
+}
+.footer-upper-search button:hover{
+   cursor: pointer;
+   color: white;
+   animation: bigger 1s forwards;
+}
+.footer-upper-icon{
+   padding-top: 22%;
+   padding-left: 30px;
+}
+.footer-upper-icon i{
+   font-size: 25px;
+   color: gray;
+   padding-left: 5px;
+}
+.footer-upper-icon i:hover{
+   color: white;
+   animation: bigger 1s forwards;
+   cursor: pointer;
+}
+.footer-mid{
+   display: grid;
+   grid-template-columns: 15% 20% 20% 20% 20%;
+   grid-column-gap: 1%;
+   padding: 1% 1%;
+   border-bottom: 2px solid white;
+}
+.footer-mid-logo{
+   background-image: url("../images/logo-black.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+.footer-mid-div1,.footer-mid-div2,.footer-mid-div3,.footer-mid-div4{
+   width: 100%;
+   height: 100%;
+   padding-left: 30px;
+   transform: translate(0%,20%);
+}
+.footer-mid-div1 ul,.footer-mid-div2 ul,.footer-mid-div3 ul,.footer-mid-div4 ul{
+   list-style-type: none;
+   line-height: 30px;
+}
+.footer-mid-div1 h2,.footer-mid-div2 h2,.footer-mid-div3 h2,.footer-mid-div4 h2{
+   color: white;
+}
+.footer-mid-div1 a,.footer-mid-div2 a,.footer-mid-div3 a,.footer-mid-div4 a{
+   text-decoration: none;
+   color: gray;
+   display: block;
+}
+.footer-mid-div1 a:hover,.footer-mid-div2 a:hover,.footer-mid-div3 a:hover,.footer-mid-div4 a:hover{
+   text-decoration: underline;
+   color: white;
+   animation: bigger 1s forwards;
+}
+.footer-lower{
+   text-align: center;
+   font-size: 1.1em;
+   color: rgb(167, 167, 167);
+   padding: 1%;
+}
+.footer-lower i{
+   color: red;
+   animation: hart  2s forwards;
+   animation-iteration-count: infinite;
+}
+@keyframes bigger {
+   50%{
+       transform: scale(1.05,1.05);
+   }
+}
+@keyframes hart {
+   50%{
+       transform: scale(0,1.1);
+   }
+}
